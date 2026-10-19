@@ -1,7 +1,8 @@
 [gd_scene format=4 uid="uid://d105fywu2ava4"]
 
 [ext_resource type="Texture2D" uid="uid://caoroxwklclip" path="res://assets/img/tilemap/IntraWallPlatform.png" id="1_2q6dc"]
-[ext_resource type="PackedScene" uid="uid://ph6g8641c4p7" path="res://scenes/background.tscn" id="1_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://b08fva5cegqnx" path="res://scenes/background_1.tscn" id="1_mx8sn"]
+[ext_resource type="PackedScene" uid="uid://ph6g8641c4p7" path="res://scenes/background_2.tscn" id="1_w7c3h"]
 [ext_resource type="PackedScene" uid="uid://od6pgmulljwc" path="res://scenes/player.tscn" id="3_w8frs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ypoqj"]
@@ -179,7 +180,10 @@ sources/0 = SubResource("TileSetAtlasSource_ypoqj")
 
 [node name="Level" type="Node2D" unique_id=569494804]
 
-[node name="Background" parent="." unique_id=1963312757 instance=ExtResource("1_w7c3h")]
+[node name="Background2" parent="." unique_id=1963312757 instance=ExtResource("1_mx8sn")]
+
+[node name="Background" parent="." unique_id=1005643533 instance=ExtResource("1_w7c3h")]
+visible = false
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1861123504]
 position = Vector2(10, 16)
