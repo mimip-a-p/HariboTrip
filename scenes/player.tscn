@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6qrnp"]
 size = Vector2(60, 44)
 
-[node name="Player" type="CharacterBody2D" unique_id=453332680]
+[node name="Character" type="CharacterBody2D" unique_id=453332680 groups=["Player"]]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_g2els")
 

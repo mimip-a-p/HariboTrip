@@ -14,8 +14,8 @@ func _ready() -> void:
 
 func new_game():
 	#reset the nodes
-	$Player.position = PLAYER_START_POS
-	$Player.velocity = Vector2i(0, 0)
+	$Character.position = PLAYER_START_POS
+	$Character.velocity = Vector2i(0, 0)
 	$Camera2D.position = Vector2i(0, 0)
 	$TileMapLayer.position = Vector2i(0, 0)
 
@@ -24,5 +24,5 @@ func _process(delta: float) -> void:
 	speed = START_SPEED
 	
 	#move player and camera
-	$Player.position.x += speed
+	$Character.position.x += speed
 	$Camera2D.position.x += speed
