@@ -12,6 +12,8 @@ size = Vector2(67.99999, 48.666668)
 
 [node name="Character" type="CharacterBody2D" unique_id=453332680 groups=["Player"]]
 scale = Vector2(1.5, 1.5)
+floor_stop_on_slope = false
+floor_constant_speed = true
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=574089966]
