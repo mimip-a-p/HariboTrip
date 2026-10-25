@@ -25,6 +25,10 @@ window/stretch/aspect="expand"
 
 Player=""
 
+[gui]
+
+theme/custom_font="uid://cai7lcbny05e4"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

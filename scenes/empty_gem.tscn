@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bmhmxcl33eoff"]
+
+[ext_resource type="Texture2D" uid="uid://bmbvrl1kvtkl6" path="res://assets/img/collect/EmptyGem.png" id="1_qosrc"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1368632416]
+texture = ExtResource("1_qosrc")

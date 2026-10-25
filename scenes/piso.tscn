@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_6qrnp"]
 radius = 12.0
 
-[node name="Piso" type="Area2D" unique_id=447850895]
+[node name="Piso" type="Area2D" unique_id=447850895 groups=["Piso"]]
 script = ExtResource("1_f4ihi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1535212496]

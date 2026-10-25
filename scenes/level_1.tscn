@@ -181,6 +181,8 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ypoqj")
 
+[sub_resource type="LabelSettings" id="LabelSettings_6qrnp"]
+
 [node name="Level" type="Node2D" unique_id=569494804]
 script = ExtResource("1_5xbjy")
 
@@ -200,6 +202,15 @@ position = Vector2(1431, 280)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2021175699]
 position = Vector2(320, 180)
 scale = Vector2(1.5, 1.5)
+
+[node name="Label" type="Label" parent="Camera2D" unique_id=1182355936]
+unique_name_in_owner = true
+offset_left = 142.0
+offset_top = -110.0
+offset_right = 200.0
+offset_bottom = -87.0
+text = "SCORE: 0"
+label_settings = SubResource("LabelSettings_6qrnp")
 
 [node name="Piso" parent="." unique_id=447850895 instance=ExtResource("6_fcfvj")]
 position = Vector2(244, 287)
