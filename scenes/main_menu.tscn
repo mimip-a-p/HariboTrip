@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://jpheytu7o07b"]
+
+[ext_resource type="Script" uid="uid://bfxr1ogwym82x" path="res://scenes/main_menu.gd" id="1_1ajci"]
+[ext_resource type="Texture2D" uid="uid://dt7u05y3i3vht" path="res://assets/img/background/plx-2-1.png" id="1_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://uh6tpsyul351" path="res://assets/fonts/startingmenu/start.png" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://cpck34iyvevet" path="res://assets/img/background/plx-2-2.png" id="2_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://d3obpiewj7iys" path="res://assets/img/background/plx-2-3.png" id="3_flqon"]
+[ext_resource type="Texture2D" uid="uid://cmv82ikdjav0s" path="res://assets/img/background/plx-2-4.png" id="4_rcqid"]
+[ext_resource type="Texture2D" uid="uid://nm2v8v4vcmyi" path="res://assets/img/background/plx-2-5.png" id="5_1ajci"]
+[ext_resource type="Texture2D" uid="uid://doh3aldjc7114" path="res://assets/img/background/plx-2-6.png" id="6_7b55j"]
+[ext_resource type="Script" uid="uid://dt0sbd6yypvak" path="res://scenes/parallax_2d_6.gd" id="6_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://c6v65r68275uf" path="res://assets/img/background/plx-2-7.png" id="7_5pajh"]
+[ext_resource type="Texture2D" uid="uid://omoglwlie63k" path="res://assets/fonts/startingmenu/settings.png" id="9_j7ex8"]
+[ext_resource type="Texture2D" uid="uid://co480lqbnc82u" path="res://assets/fonts/startingmenu/quit.png" id="10_a8gd2"]
+[ext_resource type="Texture2D" uid="uid://dk3beephd2128" path="res://assets/fonts/startingmenu/title.png" id="12_flqon"]
+[ext_resource type="Texture2D" uid="uid://gq3phjj444dj" path="res://assets/fonts/startingmenu/title-haribots-sheet.png" id="13_rcqid"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ajci"]
+atlas = ExtResource("13_rcqid")
+region = Rect2(0, 0, 640, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7b55j"]
+atlas = ExtResource("13_rcqid")
+region = Rect2(640, 0, 640, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pajh"]
+atlas = ExtResource("13_rcqid")
+region = Rect2(1280, 0, 640, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6qrnp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ajci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7b55j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pajh")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[node name="MainMenu" type="Control" unique_id=50621293]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ajci")
+
+[node name="Background" type="Parallax2D" parent="." unique_id=777712554]
+
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=905861016]
+repeat_size = Vector2(640, 0)
+repeat_times = 5
+follow_viewport = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D" unique_id=1042989045]
+texture = ExtResource("1_5dd4i")
+centered = false
+
+[node name="Parallax2D2" type="Parallax2D" parent="Background" unique_id=1174512038]
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(640, 0)
+autoscroll = Vector2(-5, 0)
+repeat_times = 5
+follow_viewport = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D2" unique_id=1634304711]
+texture = ExtResource("2_lgwnu")
+centered = false
+
+[node name="Parallax2D3" type="Parallax2D" parent="Background" unique_id=727681372]
+scroll_scale = Vector2(0.6, 1)
+repeat_size = Vector2(640, 0)
+autoscroll = Vector2(-7, 0)
+repeat_times = 5
+follow_viewport = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D3" unique_id=856096581]
+texture = ExtResource("3_flqon")
+centered = false
+
+[node name="Parallax2D4" type="Parallax2D" parent="Background" unique_id=1158730043]
+scroll_scale = Vector2(0.7, 1)
+repeat_size = Vector2(640, 0)
+autoscroll = Vector2(-9, 0)
+repeat_times = 5
+follow_viewport = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D4" unique_id=880452109]
+texture = ExtResource("4_rcqid")
+centered = false
+
+[node name="Parallax2D5" type="Parallax2D" parent="Background" unique_id=248912850]
+scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(640, 0)
+autoscroll = Vector2(-11, 0)
+repeat_times = 5
+follow_viewport = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D5" unique_id=607743780]
+texture = ExtResource("5_1ajci")
+centered = false
+
+[node name="Parallax2D6" type="Parallax2D" parent="Background" unique_id=398102728]
+repeat_size = Vector2(640, 0)
+repeat_times = 5
+follow_viewport = false
+script = ExtResource("6_lgwnu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D6" unique_id=435119335]
+texture = ExtResource("6_7b55j")
+centered = false
+
+[node name="Parallax2D7" type="Parallax2D" parent="Background" unique_id=162755214]
+scroll_scale = Vector2(0.9, 1)
+scroll_offset = Vector2(277, 113)
+repeat_size = Vector2(640, 0)
+repeat_times = 5
+follow_viewport = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D7" unique_id=1040838688]
+position = Vector2(363, -117)
+scale = Vector2(1.0046875, 1.0111111)
+texture = ExtResource("7_5pajh")
+centered = false
+
+[node name="Title" type="TextureRect" parent="." unique_id=423838731]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("12_flqon")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2111527917]
+sprite_frames = SubResource("SpriteFrames_6qrnp")
+animation = &"idle"
+frame_progress = 0.53885204
+centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1455753720]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.625
+offset_top = -4.0
+offset_right = 72.625
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -9
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=786443212]
+layout_mode = 2
+size_flags_vertical = 3
+icon = ExtResource("1_l6cm7")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1304704436]
+layout_mode = 2
+size_flags_vertical = 3
+icon = ExtResource("9_j7ex8")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=194211418]
+layout_mode = 2
+size_flags_vertical = 3
+icon = ExtResource("10_a8gd2")
+flat = true
+icon_alignment = 1
+expand_icon = true
