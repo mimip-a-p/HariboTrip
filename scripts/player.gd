@@ -23,7 +23,12 @@ func _physics_process(delta):
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_accept"):
 			velocity.y = JUMP_SPEED
-			
+		else:
+			$PlayerRun.play("run")
+	
+	else:
+		$PlayerRun.stop #put animation for jump here
+		
 	move_and_slide()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
