@@ -167,7 +167,7 @@ size = Vector2(67.99999, 48.666668)
 [node name="Character" type="CharacterBody2D" unique_id=453332680 groups=["Player"]]
 floor_stop_on_slope = false
 floor_constant_speed = true
-floor_max_angle = 1.0524335
+floor_max_angle = 3.1415927
 floor_snap_length = 20.5
 script = ExtResource("1_g2els")
 
@@ -181,12 +181,10 @@ position = Vector2(20, 36)
 shape = SubResource("CapsuleShape2D_qlg0r")
 
 [node name="DownCollision" type="CollisionShape2D" parent="." unique_id=920967396]
-visible = false
 position = Vector2(21, 25)
 shape = SubResource("CapsuleShape2D_4ni07")
 
 [node name="RunCollision" type="CollisionShape2D" parent="." unique_id=1970676484]
-visible = false
 position = Vector2(32, 33.5)
 shape = SubResource("RectangleShape2D_qlg0r")
 
@@ -200,7 +198,6 @@ shape = SubResource("RectangleShape2D_xoxrf")
 
 [node name="GemBar" type="Label" parent="CanvasLayer" unique_id=1739389137]
 unique_name_in_owner = true
-visible = false
 offset_right = 164.0
 offset_bottom = 24.0
 
