@@ -95,7 +95,7 @@ tile_map_data = PackedByteArray("AAABAAkAAAABAAAAAAABAAoAAAABAAEAAAACAAkAAAABAAA
 tile_set = SubResource("TileSet_6qrnp")
 
 [node name="Character" parent="." unique_id=453332680 instance=ExtResource("4_ne2mo")]
-position = Vector2(15, 222.00002)
+position = Vector2(14, 248)
 
 [node name="NextLevel" parent="." unique_id=1263516534 instance=ExtResource("5_6cvei")]
 position = Vector2(368, 279)
