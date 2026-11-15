@@ -80,6 +80,12 @@ centered = false
 texture = ExtResource("10_n1ow4")
 centered = false
 
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1795514209]
+[node name="Parallax2D9" type="Parallax2D" parent="." unique_id=1449743192]
+modulate = Color(0.7432059, 0.7445036, 0.8992859, 1)
+scroll_scale = Vector2(-0.9, 1)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D9" unique_id=758139273]
+position = Vector2(-4, -2.0000002)
+scale = Vector2(1.00625, 1.0055556)
 texture = ExtResource("8_6vm3t")
 centered = false
