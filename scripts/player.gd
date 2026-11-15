@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-const GRAVITY : int = 4200
+const GRAVITY : int = 3600
+const SPEED : float = 300.0
 const JUMP_SPEED : int = -900
 const SLOPE_THRESHOLD : float = 0.1
 const AIR_GRACE : float = 0.15
@@ -21,6 +22,8 @@ var gem_list: Array[TextureRect] = []
 @onready var gem_bar = %gem_bar
 
 func _ready() -> void:
+	floor_snap_length = 16.0
+	floor_constant_speed = true
 	_apply_state()
 	for child in gem_bar.get_children():
 		if child is TextureRect:
@@ -101,4 +104,3 @@ func add_gem_to_bar() -> void:
 	gems_collected += 1
 	
 	print("Gems collected: ", gems_collected)
-	
