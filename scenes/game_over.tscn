@@ -13,7 +13,7 @@ offset_bottom = 360.0
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=852757482]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1463338763]
-modulate = Color(0.34064347, 0.34064347, 0.34064347, 0.57600003)
+modulate = Color(0.16637444, 0.1663743, 0.16637424, 0.81960785)
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Sprite2D" unique_id=119760280]
 offset_right = 640.0
