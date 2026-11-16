@@ -93,6 +93,7 @@ offset_right = 128.0
 offset_bottom = 58.0
 grow_horizontal = 2
 scale = Vector2(0.7, 0.7)
+metadata/_edit_use_anchors_ = true
 
 [node name="Background" parent="." unique_id=1963312757 instance=ExtResource("2_4nkto")]
 
@@ -120,21 +121,16 @@ offset_right = 245.0
 offset_bottom = -139.0
 text = "SCORE: 0"
 label_settings = SubResource("LabelSettings_6qrnp")
-
-[node name="Piso" parent="." unique_id=447850895 instance=ExtResource("6_fcfvj")]
-position = Vector2(244, 287)
-
-[node name="Piso2" parent="." unique_id=2048623157 instance=ExtResource("6_fcfvj")]
-position = Vector2(286, 287)
-
-[node name="Piso3" parent="." unique_id=1486725664 instance=ExtResource("6_fcfvj")]
-position = Vector2(327, 287)
+metadata/_edit_use_anchors_ = true
 
 [node name="Gem" parent="." unique_id=1243147824 instance=ExtResource("7_pa8r4")]
-position = Vector2(376, 287)
+position = Vector2(234, 282)
 
 [node name="StartPosition" type="Marker2D" parent="." unique_id=1440845000]
 position = Vector2(-438, 80)
 
 [node name="EndPosition" type="Marker2D" parent="." unique_id=537812174]
 position = Vector2(7554, 2)
+
+[node name="Piso" parent="." unique_id=447850895 instance=ExtResource("6_fcfvj")]
+position = Vector2(159, 289)

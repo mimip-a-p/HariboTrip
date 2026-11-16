@@ -3,14 +3,68 @@
 [ext_resource type="Script" uid="uid://del1pspqa872o" path="res://scenes/piso.gd" id="1_f4ihi"]
 [ext_resource type="Texture2D" uid="uid://b7wvoyoqo5mpx" path="res://assets/img/collect/Piso.png" id="1_t1dia"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4ihi"]
+atlas = ExtResource("1_t1dia")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0vvb"]
+atlas = ExtResource("1_t1dia")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sy7vj"]
+atlas = ExtResource("1_t1dia")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3736"]
+atlas = ExtResource("1_t1dia")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68bvb"]
+atlas = ExtResource("1_t1dia")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foi16"]
+atlas = ExtResource("1_t1dia")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6qrnp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4ihi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0vvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sy7vj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3736")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68bvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foi16")
+}],
+"loop": 1,
+"name": &"spin",
+"speed": 6.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_6qrnp"]
 radius = 12.0
 
 [node name="Piso" type="Area2D" unique_id=447850895 groups=["Piso"]]
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_f4ihi")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1535212496]
-texture = ExtResource("1_t1dia")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1712190477]
+sprite_frames = SubResource("SpriteFrames_6qrnp")
+animation = &"spin"
+frame = 3
+frame_progress = 0.079249404
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=476873658]
 shape = SubResource("CircleShape2D_6qrnp")
