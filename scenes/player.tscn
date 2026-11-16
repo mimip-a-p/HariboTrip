@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://od6pgmulljwc"]
 
 [ext_resource type="Script" uid="uid://conkwdbbntyit" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://dtraaaxdrk4xr" path="res://scenes/animation.gd" id="2_fjrip"]
 [ext_resource type="Texture2D" uid="uid://m7mv78al4gk4" path="res://assets/img/player/Downward_Kalesa.png" id="2_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://t7j264d2jlmo" path="res://assets/img/player/KalesaSiborgRun.png" id="3_dqkch"]
 [ext_resource type="Texture2D" uid="uid://bmbvrl1kvtkl6" path="res://assets/img/collect/EmptyGem.png" id="3_qhqgy"]
+[ext_resource type="Script" uid="uid://b0nae5dtxvqi2" path="res://scenes/collect.gd" id="3_smehm"]
 [ext_resource type="Texture2D" uid="uid://b7t0bqs3rej3g" path="res://assets/img/player/Upward_Kalesa.png" id="4_tuyoq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
@@ -171,7 +173,13 @@ floor_max_angle = 3.1415927
 floor_snap_length = 32.0
 script = ExtResource("1_g2els")
 
-[node name="PlayerRun" type="AnimatedSprite2D" parent="." unique_id=875568302]
+[node name="Animation" type="Node" parent="." unique_id=1792229433]
+script = ExtResource("2_fjrip")
+
+[node name="Collect" type="Node" parent="." unique_id=1411141899]
+script = ExtResource("3_smehm")
+
+[node name="Kalesa" type="AnimatedSprite2D" parent="." unique_id=875568302]
 position = Vector2(32, 32)
 sprite_frames = SubResource("SpriteFrames_6qrnp")
 animation = &"upward"
@@ -240,4 +248,4 @@ custom_maximum_size = Vector2(24, 24)
 layout_mode = 2
 texture = ExtResource("3_qhqgy")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Collect" method="_on_area_2d_area_entered"]
