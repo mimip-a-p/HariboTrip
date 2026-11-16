@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtxnia5ww786q" path="res://scenes/level.gd" id="1_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://b08fva5cegqnx" path="res://scenes/background_1.tscn" id="2_4nkto"]
+[ext_resource type="PackedScene" uid="uid://c86i6rqmyci7g" path="res://scenes/texture_progress_bar.tscn" id="2_15mv3"]
 [ext_resource type="Texture2D" uid="uid://caoroxwklclip" path="res://assets/img/tilemap/IntraWallPlatform.png" id="3_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://od6pgmulljwc" path="res://scenes/player.tscn" id="4_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://ccbhvw3ow1f8k" path="res://scenes/next_level.tscn" id="5_4nkto"]
@@ -80,6 +81,19 @@ sources/0 = SubResource("TileSetAtlasSource_ypoqj")
 [node name="Level" type="Node2D" unique_id=569494804]
 script = ExtResource("1_5xbjy")
 
+[node name="HUD" type="CanvasLayer" parent="." unique_id=597585520]
+
+[node name="TextureProgressBar" parent="HUD" unique_id=681729573 instance=ExtResource("2_15mv3")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -128.0
+offset_top = 17.999998
+offset_right = 128.0
+offset_bottom = 58.0
+grow_horizontal = 2
+scale = Vector2(0.7, 0.7)
+
 [node name="Background" parent="." unique_id=1963312757 instance=ExtResource("2_4nkto")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1861123504]
@@ -97,14 +111,13 @@ position = Vector2(7547, 249)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2021175699]
 position = Vector2(320, 180)
-scale = Vector2(1.5, 1.5)
 
 [node name="Label" type="Label" parent="Camera2D" unique_id=1182355936]
 unique_name_in_owner = true
-offset_left = 142.0
-offset_top = -110.0
-offset_right = 200.0
-offset_bottom = -87.0
+offset_left = 187.0
+offset_top = -162.0
+offset_right = 245.0
+offset_bottom = -139.0
 text = "SCORE: 0"
 label_settings = SubResource("LabelSettings_6qrnp")
 
@@ -119,3 +132,9 @@ position = Vector2(327, 287)
 
 [node name="Gem" parent="." unique_id=1243147824 instance=ExtResource("7_pa8r4")]
 position = Vector2(376, 287)
+
+[node name="StartPosition" type="Marker2D" parent="." unique_id=1440845000]
+position = Vector2(-438, 80)
+
+[node name="EndPosition" type="Marker2D" parent="." unique_id=537812174]
+position = Vector2(7554, 2)

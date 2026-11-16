@@ -22,25 +22,17 @@ texture_region_size = Vector2i(32, 32)
 5:0/0 = 0
 5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 2:1/0 = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:1/0 = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:1/0 = 0
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 5:1/0 = 0
 5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:2/0 = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:2/0 = 0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:2/0 = 0
 5:2/0 = 0
 5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -67,13 +59,11 @@ texture_region_size = Vector2i(32, 32)
 5:4/0 = 0
 5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.4978142, 4.687607, 16, -12.010261, 16, 16, -12.037996, 16)
 0:5/0 = 0
-0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:5/0 = 0
 1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 2:5/0 = 0
 2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:5/0 = 0
-3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:5/0 = 0
 4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 5:5/0 = 0
@@ -84,7 +74,7 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ypoqj")
 
-[sub_resource type="LabelSettings" id="LabelSettings_6qrnp"]
+[sub_resource type="LabelSettings" id="LabelSettings_ah8om"]
 
 [node name="Level" type="Node2D" unique_id=569494804]
 script = ExtResource("1_5xbjy")
@@ -104,15 +94,14 @@ position = Vector2(17, 248)
 [node name="NextLevel" parent="." unique_id=1263516534 instance=ExtResource("5_4nkto")]
 position = Vector2(12620, 184)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2021175699]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1852666252]
 position = Vector2(320, 180)
-scale = Vector2(1.5, 1.5)
 
-[node name="Label" type="Label" parent="Camera2D" unique_id=1182355936]
+[node name="Label" type="Label" parent="Camera2D" unique_id=2140243833]
 unique_name_in_owner = true
-offset_left = 142.0
-offset_top = -110.0
-offset_right = 200.0
-offset_bottom = -87.0
+offset_left = 187.0
+offset_top = -162.0
+offset_right = 245.0
+offset_bottom = -139.0
 text = "SCORE: 0"
-label_settings = SubResource("LabelSettings_6qrnp")
+label_settings = SubResource("LabelSettings_ah8om")
