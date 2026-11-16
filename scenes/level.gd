@@ -5,6 +5,8 @@ const CAM_START_POS := Vector2i(320, 180)
 const CAM_LEAD : float = 320.0
 const START_SPEED : float = 1
 const MAX_SPEED : int = 25
+const FALL_LIMIT : float = 500.0
+const GAME_OVER_SCENE = preload("res://scenes/game_over.tscn")
 
 var speed : float
 var max_prog = 0
@@ -24,9 +26,21 @@ func new_game():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if $Character.position.y > FALL_LIMIT:
+		game_over()
+		return
+		
 	var curr_prog = $Character.position.x - start_pos.x
 	$HUD/TextureProgressBar.value = (curr_prog / max_prog) * 100
 	speed = START_SPEED
 	
 	$Character.position.x += speed
 	$Camera2D.position.x = $Character.position.x - PLAYER_START_POS.x + CAM_LEAD
+
+func game_over() -> void:
+	set_process(false)
+	$Character.set_physics_process(false)
+	var layer := CanvasLayer.new()
+	layer.layer = 100
+	add_child(layer)
+	layer.add_child(GAME_OVER_SCENE.instantiate())

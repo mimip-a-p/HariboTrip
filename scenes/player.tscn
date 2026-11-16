@@ -202,14 +202,14 @@ shape = SubResource("RectangleShape2D_qlg0r")
 position = Vector2(33.333332, 33.333332)
 shape = SubResource("RectangleShape2D_xoxrf")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=701505960]
+[node name="GemBar" type="CanvasLayer" parent="." unique_id=701505960]
 
-[node name="GemBar" type="Label" parent="CanvasLayer" unique_id=1739389137]
+[node name="GemBar" type="Label" parent="GemBar" unique_id=1739389137]
 unique_name_in_owner = true
 offset_right = 164.0
 offset_bottom = 24.0
 
-[node name="gem_bar" type="HBoxContainer" parent="CanvasLayer/GemBar" unique_id=1349641106]
+[node name="gem_bar" type="HBoxContainer" parent="GemBar/GemBar" unique_id=1349641106]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 12.0
@@ -218,32 +218,32 @@ offset_right = 176.0
 offset_bottom = 49.0
 scale = Vector2(0.5, 0.5)
 
-[node name="gem_empty_siborg" type="TextureRect" parent="CanvasLayer/GemBar/gem_bar" unique_id=1006211753]
+[node name="gem_empty_siborg" type="TextureRect" parent="GemBar/GemBar/gem_bar" unique_id=1006211753]
 custom_maximum_size = Vector2(24, 24)
 layout_mode = 2
 texture = ExtResource("3_qhqgy")
 
-[node name="gem_empty_honeydroid" type="TextureRect" parent="CanvasLayer/GemBar/gem_bar" unique_id=787219070]
+[node name="gem_empty_honeydroid" type="TextureRect" parent="GemBar/GemBar/gem_bar" unique_id=787219070]
 custom_maximum_size = Vector2(24, 24)
 layout_mode = 2
 texture = ExtResource("3_qhqgy")
 
-[node name="gem_empty_babybuster" type="TextureRect" parent="CanvasLayer/GemBar/gem_bar" unique_id=731685420]
+[node name="gem_empty_babybuster" type="TextureRect" parent="GemBar/GemBar/gem_bar" unique_id=731685420]
 custom_maximum_size = Vector2(24, 24)
 layout_mode = 2
 texture = ExtResource("3_qhqgy")
 
-[node name="gem_empty_popstron" type="TextureRect" parent="CanvasLayer/GemBar/gem_bar" unique_id=716344784]
+[node name="gem_empty_popstron" type="TextureRect" parent="GemBar/GemBar/gem_bar" unique_id=716344784]
 custom_maximum_size = Vector2(24, 24)
 layout_mode = 2
 texture = ExtResource("3_qhqgy")
 
-[node name="gem_empty_haribot" type="TextureRect" parent="CanvasLayer/GemBar/gem_bar" unique_id=1242540964]
+[node name="gem_empty_haribot" type="TextureRect" parent="GemBar/GemBar/gem_bar" unique_id=1242540964]
 custom_maximum_size = Vector2(24, 24)
 layout_mode = 2
 texture = ExtResource("3_qhqgy")
 
-[node name="gem_empty_fundyboo" type="TextureRect" parent="CanvasLayer/GemBar/gem_bar" unique_id=2142693731]
+[node name="gem_empty_fundyboo" type="TextureRect" parent="GemBar/GemBar/gem_bar" unique_id=2142693731]
 custom_maximum_size = Vector2(24, 24)
 layout_mode = 2
 texture = ExtResource("3_qhqgy")

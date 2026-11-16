@@ -12,6 +12,19 @@ offset_bottom = 360.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=852757482]
 
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1463338763]
+modulate = Color(0.34064347, 0.34064347, 0.34064347, 0.57600003)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Sprite2D" unique_id=119760280]
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.62377065, 0.62377065, 0.62377065, 0.70000005)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1464744546]
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("3_7m3ot")
+
 [node name="Text" type="VBoxContainer" parent="CanvasLayer" unique_id=551887603]
 anchors_preset = -1
 anchor_left = 0.5
@@ -39,18 +52,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 icon = ExtResource("2_racf3")
 flat = true
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1464744546]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_7m3ot")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1463338763]
-
-[node name="ColorRect" type="ColorRect" parent="Sprite2D" unique_id=119760280]
-offset_right = 640.0
-offset_bottom = 360.0
-color = Color(0.62377065, 0.62377065, 0.62377065, 0.70000005)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=348160194]
 anchor_mode = 0
