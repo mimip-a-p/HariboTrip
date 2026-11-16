@@ -124,7 +124,7 @@ label_settings = SubResource("LabelSettings_6qrnp")
 metadata/_edit_use_anchors_ = true
 
 [node name="Gem" parent="." unique_id=1243147824 instance=ExtResource("7_pa8r4")]
-position = Vector2(234, 282)
+position = Vector2(552, 218)
 
 [node name="StartPosition" type="Marker2D" parent="." unique_id=1440845000]
 position = Vector2(-438, 80)
@@ -132,5 +132,18 @@ position = Vector2(-438, 80)
 [node name="EndPosition" type="Marker2D" parent="." unique_id=537812174]
 position = Vector2(7554, 2)
 
-[node name="Piso" parent="." unique_id=447850895 instance=ExtResource("6_fcfvj")]
+[node name="Piso" type="Node2D" parent="." unique_id=386394251]
 position = Vector2(159, 289)
+scale = Vector2(0.8, 0.8)
+
+[node name="Piso" parent="Piso" unique_id=447850895 instance=ExtResource("6_fcfvj")]
+position = Vector2(335, -87.5)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Piso2" parent="Piso" unique_id=1495146488 instance=ExtResource("6_fcfvj")]
+position = Vector2(722.5, -5)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Piso3" parent="Piso" unique_id=819808143 instance=ExtResource("6_fcfvj")]
+position = Vector2(775, -6.25)
+scale = Vector2(0.99999994, 0.99999994)
