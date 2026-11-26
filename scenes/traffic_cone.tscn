@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://deoxmp7lu5qll"]
+
+[ext_resource type="Texture2D" uid="uid://cenichn8dc07d" path="res://assets/img/obstacle/TrafficCone.png" id="1_71r74"]
+[ext_resource type="Texture2D" uid="uid://csxrginutcek0" path="res://assets/img/obstacle/TrafficConeBroken.png" id="1_iby7d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecj36"]
+atlas = ExtResource("1_iby7d")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3gb5"]
+atlas = ExtResource("1_iby7d")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wm5l"]
+atlas = ExtResource("1_iby7d")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs7df"]
+atlas = ExtResource("1_iby7d")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsvvn"]
+atlas = ExtResource("1_iby7d")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_re8yg"]
+atlas = ExtResource("1_iby7d")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72c0u"]
+atlas = ExtResource("1_iby7d")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8f5s"]
+atlas = ExtResource("1_iby7d")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjf34"]
+atlas = ExtResource("1_iby7d")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7vwvp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecj36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3gb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wm5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs7df")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsvvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_re8yg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72c0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8f5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjf34")
+}],
+"loop": 1,
+"name": &"broken",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_71r74")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="TrafficCone" type="Area2D" unique_id=1941651107]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1630286688]
+polygon = PackedVector2Array(1, -8, 0, -8, -1, -8, -3, -6, -14, 12, -14, 16, 14, 16, 14, 12, 3, -6)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1482372360]
+sprite_frames = SubResource("SpriteFrames_7vwvp")
+animation = &"broken"
+frame = 5
+frame_progress = 0.8734829
