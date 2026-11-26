@@ -185,7 +185,7 @@ sprite_frames = SubResource("SpriteFrames_6qrnp")
 animation = &"upward"
 
 [node name="UpCollision" type="CollisionShape2D" parent="." unique_id=985160327]
-position = Vector2(23, 28)
+position = Vector2(25, 27)
 shape = SubResource("CapsuleShape2D_qlg0r")
 
 [node name="DownCollision" type="CollisionShape2D" parent="." unique_id=920967396]
