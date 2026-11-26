@@ -153,8 +153,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qlg0r"]
-radius = 25.0
-height = 54.0
+radius = 31.0
+height = 66.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ni07"]
 radius = 20.0
@@ -185,24 +185,28 @@ sprite_frames = SubResource("SpriteFrames_6qrnp")
 animation = &"upward"
 
 [node name="UpCollision" type="CollisionShape2D" parent="." unique_id=985160327]
-position = Vector2(20, 36)
+position = Vector2(23, 28)
 shape = SubResource("CapsuleShape2D_qlg0r")
 
 [node name="DownCollision" type="CollisionShape2D" parent="." unique_id=920967396]
+visible = false
 position = Vector2(21, 25)
 shape = SubResource("CapsuleShape2D_4ni07")
 
 [node name="RunCollision" type="CollisionShape2D" parent="." unique_id=1970676484]
+visible = false
 position = Vector2(32, 33.5)
 shape = SubResource("RectangleShape2D_qlg0r")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=143975201]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1295447906]
 position = Vector2(33.333332, 33.333332)
 shape = SubResource("RectangleShape2D_xoxrf")
 
 [node name="GemBar" type="CanvasLayer" parent="." unique_id=701505960]
+visible = false
 
 [node name="GemBar" type="Label" parent="GemBar" unique_id=1739389137]
 unique_name_in_owner = true
