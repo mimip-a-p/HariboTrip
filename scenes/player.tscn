@@ -153,7 +153,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qlg0r"]
-radius = 31.0
+radius = 33.0
 height = 66.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ni07"]
@@ -185,7 +185,7 @@ sprite_frames = SubResource("SpriteFrames_6qrnp")
 animation = &"upward"
 
 [node name="UpCollision" type="CollisionShape2D" parent="." unique_id=985160327]
-position = Vector2(25, 27)
+position = Vector2(28, 25)
 shape = SubResource("CapsuleShape2D_qlg0r")
 
 [node name="DownCollision" type="CollisionShape2D" parent="." unique_id=920967396]
@@ -199,10 +199,10 @@ position = Vector2(32, 33.5)
 shape = SubResource("RectangleShape2D_qlg0r")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=143975201]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1295447906]
-position = Vector2(33.333332, 33.333332)
+visible = false
+position = Vector2(32, 33)
 shape = SubResource("RectangleShape2D_xoxrf")
 
 [node name="GemBar" type="CanvasLayer" parent="." unique_id=701505960]
