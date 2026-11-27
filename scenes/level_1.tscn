@@ -147,3 +147,15 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="Piso3" parent="Piso" unique_id=819808143 instance=ExtResource("6_fcfvj")]
 position = Vector2(775, -6.25)
 scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Piso4" parent="Piso" unique_id=599361891 instance=ExtResource("6_fcfvj")]
+position = Vector2(672.50006, -20)
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="Piso5" parent="Piso" unique_id=652767500 instance=ExtResource("6_fcfvj")]
+position = Vector2(630, -36.25)
+scale = Vector2(0.99999946, 0.99999946)
+
+[node name="Piso6" parent="Piso" unique_id=1097020204 instance=ExtResource("6_fcfvj")]
+position = Vector2(592.5, -58.75003)
+scale = Vector2(0.99999887, 0.99999887)

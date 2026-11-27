@@ -29,7 +29,8 @@ func _process(delta: float) -> void:
 	if $Character.position.y > FALL_LIMIT:
 		game_over()
 		return
-		
+	
+	# HUD Progress Bar
 	var curr_prog = $Character.position.x - start_pos.x
 	$HUD/TextureProgressBar.value = (curr_prog / max_prog) * 100
 	speed = START_SPEED
