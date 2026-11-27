@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://deoxmp7lu5qll"]
 
 [ext_resource type="Texture2D" uid="uid://cenichn8dc07d" path="res://assets/img/obstacle/TrafficCone.png" id="1_71r74"]
+[ext_resource type="Script" uid="uid://ktfjn4la6kh0" path="res://scenes/traffic_cone.gd" id="1_ecj36"]
 [ext_resource type="Texture2D" uid="uid://csxrginutcek0" path="res://assets/img/obstacle/TrafficConeBroken.png" id="1_iby7d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ecj36"]
@@ -69,7 +70,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gjf34")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"broken",
 "speed": 8.0
 }, {
@@ -83,12 +84,14 @@ animations = [{
 }]
 
 [node name="TrafficCone" type="Area2D" unique_id=1941651107]
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_ecj36")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1630286688]
 polygon = PackedVector2Array(1, -8, 0, -8, -1, -8, -3, -6, -14, 12, -14, 16, 14, 16, 14, 12, 3, -6)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1482372360]
 sprite_frames = SubResource("SpriteFrames_7vwvp")
-animation = &"broken"
-frame = 5
-frame_progress = 0.8734829
+animation = &"idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

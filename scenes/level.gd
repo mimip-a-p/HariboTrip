@@ -11,9 +11,11 @@ const GAME_OVER_SCENE = preload("res://scenes/game_over.tscn")
 var speed : float
 var max_prog = 0
 var start_pos = 0
+var is_over := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	add_to_group("main")
 	max_prog = $EndPosition.position.x - $StartPosition.position.x
 	start_pos = $StartPosition.position
 
@@ -39,6 +41,9 @@ func _process(delta: float) -> void:
 	$Camera2D.position.x = $Character.position.x - PLAYER_START_POS.x + CAM_LEAD
 
 func game_over() -> void:
+	if is_over:               
+		return
+	is_over = true
 	set_process(false)
 	$Character.set_physics_process(false)
 	var layer := CanvasLayer.new()

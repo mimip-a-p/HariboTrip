@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const GRAVITY : int = 3600
+const GRAVITY : int = 3400
 const JUMP_SPEED : int = -900
 
 var air_time := 0.0

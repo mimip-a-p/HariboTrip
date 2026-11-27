@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ccbhvw3ow1f8k" path="res://scenes/next_level.tscn" id="5_4nkto"]
 [ext_resource type="PackedScene" uid="uid://b7nuy03wn2prf" path="res://scenes/piso.tscn" id="6_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://bccsxrtibqqr0" path="res://scenes/gem.tscn" id="7_pa8r4"]
+[ext_resource type="PackedScene" uid="uid://deoxmp7lu5qll" path="res://scenes/traffic_cone.tscn" id="9_e3sih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ypoqj"]
 texture = ExtResource("3_fcfvj")
@@ -159,3 +160,8 @@ scale = Vector2(0.99999946, 0.99999946)
 [node name="Piso6" parent="Piso" unique_id=1097020204 instance=ExtResource("6_fcfvj")]
 position = Vector2(592.5, -58.75003)
 scale = Vector2(0.99999887, 0.99999887)
+
+[node name="Obstacle" type="Node2D" parent="." unique_id=1634445620]
+
+[node name="TrafficCone" parent="Obstacle" unique_id=1941651107 instance=ExtResource("9_e3sih")]
+position = Vector2(1347, 231.00002)
