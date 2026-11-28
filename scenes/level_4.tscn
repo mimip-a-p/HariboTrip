@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://caoroxwklclip" path="res://assets/img/tilemap/IntraWallPlatform.png" id="3_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://od6pgmulljwc" path="res://scenes/player.tscn" id="4_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://ccbhvw3ow1f8k" path="res://scenes/next_level.tscn" id="5_4nkto"]
+[ext_resource type="PackedScene" uid="uid://dgsksarmearvw" path="res://scenes/jose_rizal_boss.tscn" id="7_x7blo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ypoqj"]
 texture = ExtResource("3_fcfvj")
@@ -126,3 +127,6 @@ position = Vector2(-438, 80)
 
 [node name="EndPosition" type="Marker2D" parent="." unique_id=452676536]
 position = Vector2(19442, 2)
+
+[node name="JoseRizalBoss" parent="." unique_id=703631582 instance=ExtResource("7_x7blo")]
+position = Vector2(565, 172)

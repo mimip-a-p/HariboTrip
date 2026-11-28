@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://dgsksarmearvw"]
 
 [ext_resource type="Texture2D" uid="uid://dskolhx43m2xi" path="res://assets/img/boss/JoseRizalCD.png" id="1_245qf"]
+[ext_resource type="Script" uid="uid://bf1lktu0a668t" path="res://scenes/jose_rizal_boss.gd" id="1_uy6c8"]
 [ext_resource type="Texture2D" uid="uid://52s0t0dobexi" path="res://assets/img/boss/JoseRizalIdle.png" id="2_08see"]
 [ext_resource type="Texture2D" uid="uid://wrsdhblgdgfg" path="res://assets/img/boss/JoseRizalGR.png" id="3_uy6c8"]
 [ext_resource type="Texture2D" uid="uid://buxj46r6qg2x5" path="res://assets/img/boss/JoseRizalStrike.png" id="4_edgye"]
+[ext_resource type="Script" uid="uid://c8gnedhqxs248" path="res://scenes/finite_state_machine.gd" id="5_08see"]
+[ext_resource type="Script" uid="uid://lociprh7ivq0" path="res://scenes/idle.gd" id="7_edgye"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wealt"]
 atlas = ExtResource("1_245qf")
@@ -245,10 +248,40 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6qrnp"]
+size = Vector2(118, 234)
+
 [node name="JoseRizalBoss" type="CharacterBody2D" unique_id=703631582]
+script = ExtResource("1_uy6c8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1614850108]
 sprite_frames = SubResource("SpriteFrames_6qrnp")
-animation = &"strike"
-frame = 2
-frame_progress = 0.10788901
+animation = &"idle"
+autoplay = "idle"
+frame = 4
+frame_progress = 0.31591994
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=536533948]
+position = Vector2(12, 2)
+shape = SubResource("RectangleShape2D_6qrnp")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1490601496]
+
+[node name="debug" type="Label" parent="." unique_id=715197616]
+offset_left = -10.0
+offset_top = -132.0
+offset_right = 30.0
+offset_bottom = -115.0
+text = "test"
+
+[node name="FiniteStateMachine" type="Node2D" parent="." unique_id=162074225]
+script = ExtResource("5_08see")
+
+[node name="Idle" type="Node2D" parent="FiniteStateMachine" unique_id=961394562]
+script = ExtResource("7_edgye")
+
+[node name="Strike" type="Node2D" parent="FiniteStateMachine" unique_id=331992581]
+
+[node name="Prepare" type="Node2D" parent="FiniteStateMachine" unique_id=537488900]
+
+[node name="Cooldown" type="Node2D" parent="FiniteStateMachine" unique_id=1649951687]
